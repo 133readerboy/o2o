@@ -1,3 +1,4 @@
+# o2o项目
 use o2o;
 create table tb_area(
     area_id int(2) NOT NULL auto_increment PRIMARY KEY COMMENT '主键',
@@ -91,18 +92,4 @@ create table tb_shop(
     constraint fk_shop_profile foreign key (owner_id) references tb_person_info(user_id),
     constraint fk_shop_shopcate foreign key (shop_category_id) references tb_shop_category(shop_category_id)
 )ENGINE = InnoDB auto_increment = 1 default charset = utf8 comment '店铺表';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
