@@ -3,6 +3,14 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1" metadata-complete="true">
     <display-name>o2o</display-name>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/html/error/404.html</location>
+    </error-page>
+    <error-page>
+        <error-code>405</error-code>
+        <location>/WEB-INF/html/error/405.html</location>
+    </error-page>
     <!--配置springMVC前端控制器-->
     <servlet>
         <servlet-name>spring-dispatcher</servlet-name>
@@ -18,5 +26,6 @@
         <!--默认的所有的url请求都交给dispatcherServlet去处理-->
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+    
 </web-app>
 

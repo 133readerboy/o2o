@@ -69,22 +69,6 @@ public class Shop {
      */
     private ShopCategory shopCategory;
 
-    public Integer getPriority() {
-        return priority;
-    }
-
-    public void setPriority(Integer priority) {
-        this.priority = priority;
-    }
-
-    public ShopCategory getShopCategory() {
-        return shopCategory;
-    }
-
-    public void setShopCategory(ShopCategory shopCategory) {
-        this.shopCategory = shopCategory;
-    }
-
     public Long getShopId() {
         return shopId;
     }
@@ -131,6 +115,14 @@ public class Shop {
 
     public void setShopImg(String shopImg) {
         this.shopImg = shopImg;
+    }
+
+    public Integer getPriority() {
+        return priority;
+    }
+
+    public void setPriority(Integer priority) {
+        this.priority = priority;
     }
 
     public Date getCreateTime() {
@@ -181,11 +173,17 @@ public class Shop {
         this.owner = owner;
     }
 
-    public ShopCategory getShopCateGory() {
+    public ShopCategory getShopCategory() {
         return shopCategory;
     }
 
-    public void setShopCateGory(ShopCategory shopCateGory) {
-        this.shopCategory = shopCateGory;
+    public void setShopCategory(ShopCategory shopCategory) {
+        this.shopCategory = shopCategory;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Shop{" + "shopId=" + shopId + ", shopName='" + shopName + '\'' + ", shopDesc='" + shopDesc + '\'' + ", shopAddr='" + shopAddr + '\'' + ", phone='" + phone + '\'' + ", shopImg='" + shopImg + '\'' + ", priority=" + priority + ", createTime=" + createTime + ", lastEditTime=" + lastEditTime + ", enableStatus=" + enableStatus + ", advice='" + advice + '\'' + ", area=" + area + ", owner=" + owner + ", shopCategory=" + shopCategory + '}';
     }
 }

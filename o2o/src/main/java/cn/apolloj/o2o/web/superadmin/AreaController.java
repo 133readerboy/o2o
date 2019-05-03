@@ -35,7 +35,7 @@ public class AreaController {
     @RequestMapping(value = "/listarea",method = RequestMethod.GET)
     @ResponseBody
     private Map<String,Object> listArea(){
-        log.info("============start==========");
+        log.info("listArea()============start==========");
         long startTime = System.nanoTime();
         Map<String,Object> modelMap = new HashMap<String,Object>();
         List<Area> list = Collections.emptyList();
@@ -50,10 +50,9 @@ public class AreaController {
             modelMap.put("success", false);
             modelMap.put("errMsg", e.toString());
         }
-        log.error("test error!");
         long endTime=System.nanoTime();
         log.info("costTime:[{}ms]",endTime-startTime);
-        log.info("============stop==========");
+        log.info("listArea()============stop===========");
         return modelMap;
     }
 }

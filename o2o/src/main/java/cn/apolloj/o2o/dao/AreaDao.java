@@ -1,6 +1,7 @@
 package cn.apolloj.o2o.dao;
 
 import cn.apolloj.o2o.entity.Area;
+import org.springframework.dao.DataAccessException;
 
 import java.util.List;
 
@@ -16,5 +17,5 @@ public interface AreaDao {
      * 列出区域列表
      * @return areaList
      */
-    List<Area> queryArea();
+    List<Area> queryArea() throws DataAccessException;
 }
